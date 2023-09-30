@@ -1,0 +1,50 @@
+{
+  "name": "type-challenges",
+  "remoteUser": "type-challenges",
+  "dockerComposeFile": "./compose.dev.yaml",
+  "service": "app",
+  "postAttachCommand": "pnpm install",
+  "workspaceFolder": "/workspaces",
+  "overrideCommand": true,
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "albymor.increment-selection",
+        "bodil.file-browser",
+        "christian-kohler.path-intellisense",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "foxundermoon.shell-format",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "Gruntfuggly.todo-tree",
+        "hbenl.vscode-test-explorer",
+        "hediet.vscode-drawio",
+        "irongeek.vscode-env",
+        "kahole.magit",
+        "kavod-io.vscode-jest-test-adapter",
+        "mhutchie.git-graph",
+        "mikestead.dotenv",
+        "ms-azuretools.vscode-docker",
+        "MS-vsliveshare.vsliveshare",
+        "mutantdino.resourcemonitor",
+        "Perkovec.emoji",
+        "redhat.vscode-yaml",
+        "shd101wyy.markdown-preview-enhanced",
+        "streetsidesoftware.code-spell-checker",
+        "yzhang.markdown-all-in-one",
+        "yoavbls.pretty-ts-errors"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "eslint.workingDirectories": [{ "mode": "auto" }],
+        "eslint.experimental.useFlatConfig": true,
+        "eslint.rules.customizations": [{ "rule": "@cspell/spellchecker", "severity": "off" }]
+      }
+    }
+  }
+}

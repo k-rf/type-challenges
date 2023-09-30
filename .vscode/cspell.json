@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "gitignoreRoot": [".."],
+  "ignorePaths": [".devcontainer", "node_modules", "*.lock"],
+  "words": [
+    "commandhistory",
+    "devcontainer",
+    "instanceof",
+    "linebreak",
+    "nothrow",
+    "parens",
+    "prebuild",
+    "prettierrc",
+    "tada",
+    "tsbuildinfo",
+    "wip"
+  ]
+}

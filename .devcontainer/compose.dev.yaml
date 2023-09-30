@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+      args:
+        - REMOTE_USER=${APP_REMOTE_USER}
+        - REMOTE_WORKSPACES=${APP_REMOTE_WORKSPACES}
+        - REMOTE_HOME=${APP_REMOTE_HOME}
+    container_name: ${APP_CONTAINER_NAME}
+    working_dir: ${APP_REMOTE_WORKSPACES}
+    user: ${APP_REMOTE_USER}
+    tty: true
+    dns:
+      - 8.8.8.8
+    volumes:
+      - type: bind
+        source: ..
+        target: ${PROJECT_ROOT}
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+      - type: volume
+        source: app-bash-history
+        target: /commandhistory
+      - type: volume
+        source: app-vscode-extensions
+        target: ${APP_REMOTE_HOME}/.vscode-server/extensions
+      - type: volume
+        source: app-node_modules
+        target: ${APP_REMOTE_WORKSPACES}/node_modules
+
+networks:
+  default:
+    name: ${NETWORK_NAME}
+
+volumes:
+  app-bash-history:
+    name: ${APP_BASH_HISTORY_VOLUME_NAME}
+  app-vscode-extensions:
+    name: ${APP_VSCODE_EXTENSIONS_VOLUME_NAME}
+  app-node_modules:
+    name: ${APP_NODE_MODULES_VOLUME_NAME}
