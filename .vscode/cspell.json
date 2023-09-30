@@ -1,14 +1,23 @@
 {
   "version": "0.2",
-  "gitignoreRoot": [".."],
-  "ignorePaths": [".devcontainer", "node_modules", "*.lock"],
+  "gitignoreRoot": [
+    ".."
+  ],
+  "ignorePaths": [
+    ".devcontainer",
+    "node_modules",
+    "*.lock"
+  ],
   "words": [
+    "antfu",
     "commandhistory",
     "devcontainer",
+    "esno",
     "instanceof",
     "linebreak",
     "nothrow",
     "parens",
+    "picocolors",
     "prebuild",
     "prettierrc",
     "tada",
