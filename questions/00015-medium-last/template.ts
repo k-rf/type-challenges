@@ -1,4 +1,4 @@
-type Tail<T extends unknown[]> = ((...as: T) => never) extends (b: never, ...bs: infer U) => never ? U : never;
+type Tail<T extends unknown[]> = T extends [unknown, ...infer U] ? U : [];
 
 // 配列を縮小する方針
 type Last<T extends any[]> = T[Tail<T>["length"]];
