@@ -1,1 +1,3 @@
-type AppendArgument<Fn extends (...args: any) => unknown, A> = (...args: [...Parameters<Fn>, x: A]) => ReturnType<Fn>;
+type AppendArgument<Fn extends Function, A> = Fn extends (...args: infer P) => infer R
+  ? (...args: [...P, x: A]) => R
+  : never;
