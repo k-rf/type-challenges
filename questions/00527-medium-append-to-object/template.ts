@@ -1,1 +1,2 @@
-type AppendToObject<T, U extends PropertyKey, V> = { [K in keyof T | U]: K extends keyof T ? T[K] : V };
+type MergeObject<T> = { [K in keyof T]: T[K] };
+type AppendToObject<T, U extends PropertyKey, V> = MergeObject<T & Record<U, V>>;
