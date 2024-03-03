@@ -32,12 +32,13 @@
         "ms-azuretools.vscode-docker",
         "MS-vsliveshare.vsliveshare",
         "mutantdino.resourcemonitor",
+        "Orta.vscode-twoslash-queries",
         "Perkovec.emoji",
         "redhat.vscode-yaml",
         "shd101wyy.markdown-preview-enhanced",
         "streetsidesoftware.code-spell-checker",
-        "yzhang.markdown-all-in-one",
-        "yoavbls.pretty-ts-errors"
+        "yoavbls.pretty-ts-errors",
+        "yzhang.markdown-all-in-one"
       ],
       "settings": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
