@@ -14,15 +14,15 @@
   },
   "i18n-ally.keystyle": "flat",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.semi": false,
-  "typescript.format.semicolons": "remove",
-  "javascript.format.semicolons": "remove",
+  "prettier.semi": true,
+  "typescript.format.semicolons": "insert",
+  "javascript.format.semicolons": "insert",
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
 
   // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
 
   // Auto fix
   "editor.codeActionsOnSave": {
