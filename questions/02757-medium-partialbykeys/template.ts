@@ -1,7 +1,12 @@
-type Prettify<T> = { [K in keyof T]: T[K] } & {};
+type IncludeKey<T, K> = T extends K ? T : never;
+type ExcludeKey<T, K> = T extends K ? never : T;
 
-type PartialByKeys<T, K extends keyof T = keyof T> = Prettify<
-  Partial<T> & {
-    [P in keyof T as P extends K ? never : P]: T[P];
+type Composite<T> = Omit<T, never>;
+
+type PartialByKeys<T, K extends keyof T = keyof T> = Composite<
+  {
+    [P in keyof T as IncludeKey<P, K>]?: T[P];
+  } & {
+    [P in keyof T as ExcludeKey<P, K>]: T[P];
   }
 >;
