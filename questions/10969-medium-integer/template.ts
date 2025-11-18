@@ -1,5 +1,1 @@
-type Integer<T extends number> = `${T}` extends `${number}.${number}`
-  ? never
-  : T | number extends T
-  ? never
-  : T;
+type Integer<T extends number> = `${T}` extends `${bigint}` ? T : never;
