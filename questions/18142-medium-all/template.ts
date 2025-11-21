@@ -1,5 +1,5 @@
-type All<T extends unknown[], U, Ans = true> = T extends [infer X, ...infer R]
+type All<T extends unknown[], U> = T extends [infer X, ...infer R]
   ? IsEqual<U, X> extends true
-    ? All<R, U, true>
+    ? All<R, U>
     : false
-  : Ans;
+  : true;
