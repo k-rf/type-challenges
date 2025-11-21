@@ -16,8 +16,6 @@
         "dbaeumer.vscode-eslint",
         "eamodio.gitlens",
         "esbenp.prettier-vscode",
-        "formulahendry.auto-close-tag",
-        "formulahendry.auto-rename-tag",
         "foxundermoon.shell-format",
         "github.vscode-github-actions",
         "GitHub.vscode-pull-request-github",
@@ -45,7 +43,9 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "eslint.workingDirectories": [{ "mode": "auto" }],
         "eslint.experimental.useFlatConfig": true,
-        "eslint.rules.customizations": [{ "rule": "@cspell/spellchecker", "severity": "off" }]
+        "eslint.rules.customizations": [
+          { "rule": "@cspell/spellchecker", "severity": "off" }
+        ]
       }
     }
   }
