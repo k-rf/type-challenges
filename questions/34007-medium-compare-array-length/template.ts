@@ -1,12 +1,4 @@
-type CompareArrayLength<T extends any[], U extends any[]> = [T, U] extends [
-  [],
-  [],
-]
-  ? 0
-  : T extends []
-  ? -1
-  : U extends []
-  ? 1
-  : [T, U] extends [[unknown, ...infer TR], [unknown, ...infer UR]]
-  ? CompareArrayLength<TR, UR>
-  : never;
+type CompareArrayLength<
+  T extends unknown[],
+  U extends unknown[],
+> = keyof T extends keyof U ? (keyof U extends keyof T ? 0 : -1) : 1;
