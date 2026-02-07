@@ -1,1 +1,3 @@
-declare function join(delimiter: any): (...parts: any[]) => any
+declare function join<D extends string>(
+  delimiter: D,
+): <P extends string[]>(...parts: P) => Join<P, D>;
