@@ -1,1 +1,1 @@
-type Push<T extends readonly unknown[], U> = [...T, U];
+type Push<T extends readonly unknown[], U> = [...T, U]

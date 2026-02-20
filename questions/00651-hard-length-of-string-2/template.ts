@@ -3,4 +3,4 @@ type LengthOfString2<
   C extends 0[] = [],
 > = S extends `${string}${infer R}`
   ? LengthOfString2<R, [...C, 0]>
-  : C["length"];
+  : C['length']

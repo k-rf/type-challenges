@@ -3,4 +3,4 @@ type Combs<T extends any[]> = T extends [
   ...infer R extends string[],
 ]
   ? `${U} ${R[number]}` | Combs<R>
-  : never;
+  : never

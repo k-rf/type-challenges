@@ -41,19 +41,19 @@ type cases = [
   Expect<
     Equal<
       DynamicRoute<'/shop/[slug]/stub/[[...foo]]/[...]'>,
-      { slug: string, foo?: string[], '...': string }
+      { 'slug': string, 'foo'?: string[], '...': string }
     >
   >,
   Expect<
     Equal<
       DynamicRoute<'/shop/[slug]/stub/[[...foo]]/[...]/[]index.html'>,
-      { slug: string, foo?: string[], '...': string }
+      { 'slug': string, 'foo'?: string[], '...': string }
     >
   >,
   Expect<
     Equal<
       DynamicRoute<'/shop/[slug]/stub/[[...foo]]/[...]/[...]index.html'>,
-      { slug: string, foo?: string[], '...': string }
+      { 'slug': string, 'foo'?: string[], '...': string }
     >
   >,
   Expect<Equal<DynamicRoute<'/[slug]/[[...foo]]/[...bar]'>, never>>,

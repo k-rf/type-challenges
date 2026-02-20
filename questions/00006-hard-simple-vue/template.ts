@@ -1,11 +1,11 @@
 type GetComputed<C> = C extends Record<string, (...args: any[]) => any>
   ? { [S in keyof C]: ReturnType<C[S]> }
-  : never;
+  : never
 
 declare function SimpleVue<D, C, M>(
   options: {
-    data: (this: void) => D;
-    computed: C;
-    methods: M;
+    data: (this: void) => D
+    computed: C
+    methods: M
   } & ThisType<D & M & GetComputed<C>>,
-): any;
+): any

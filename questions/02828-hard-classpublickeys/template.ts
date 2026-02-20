@@ -1,1 +1,1 @@
-type ClassPublicKeys<T> = keyof T;
+type ClassPublicKeys<T> = keyof T

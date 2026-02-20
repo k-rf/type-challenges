@@ -3,4 +3,4 @@ type Unique<T extends unknown[], Acc extends unknown[] = []> = T extends [
   ...infer R,
 ]
   ? Unique<R, Includes<Acc, U> extends true ? Acc : [...Acc, U]>
-  : Acc;
+  : Acc

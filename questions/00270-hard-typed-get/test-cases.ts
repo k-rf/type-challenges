@@ -10,7 +10,7 @@ type cases = [
 ]
 
 type Data = {
-  foo: {
+  'foo': {
     bar: {
       value: 'foobar'
       count: 6
@@ -18,5 +18,5 @@ type Data = {
     included: true
   }
   'foo.baz': false
-  hello: 'world'
+  'hello': 'world'
 }

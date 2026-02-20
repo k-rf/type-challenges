@@ -1,1 +1,1 @@
-type Unshift<T extends readonly unknown[], U> = [U, ...T];
+type Unshift<T extends readonly unknown[], U> = [U, ...T]

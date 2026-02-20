@@ -3,4 +3,4 @@ type Subsequence<T extends any[], Ans extends any[] = []> = T extends [
   ...infer R,
 ]
   ? Subsequence<R, Ans | [...Ans, U]>
-  : Ans;
+  : Ans

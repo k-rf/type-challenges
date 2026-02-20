@@ -1,3 +1,3 @@
-type Tuple = readonly unknown[];
+type Tuple = readonly unknown[]
 
-type Concat<T extends Tuple, U extends Tuple> = [...T, ...U];
+type Concat<T extends Tuple, U extends Tuple> = [...T, ...U]

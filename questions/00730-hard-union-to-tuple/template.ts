@@ -6,11 +6,11 @@ type LastInUnion<U> =
     x: infer L,
   ) => 0
     ? L
-    : never;
+    : never
 
 /**
  * UnionToTuple<1 | 2> = [1, 2].
  */
 type UnionToTuple<U, Last = LastInUnion<U>> = [U] extends [never]
   ? []
-  : [...UnionToTuple<Exclude<U, Last>>, Last];
+  : [...UnionToTuple<Exclude<U, Last>>, Last]

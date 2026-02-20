@@ -3,5 +3,5 @@ type ToPrimitive<T> = T extends object
     ? Function
     : { [K in keyof T]: ToPrimitive<T[K]> }
   : T extends { valueOf: () => infer U }
-  ? U
-  : T;
+    ? U
+    : T

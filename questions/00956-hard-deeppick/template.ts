@@ -6,4 +6,4 @@ type DeepPick<O, K> = UnionToIntersection<
     : K extends keyof O
       ? Record<K, O[K]>
       : never
->;
+>

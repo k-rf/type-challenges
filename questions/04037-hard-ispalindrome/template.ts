@@ -8,5 +8,5 @@ type IsPalindrome<
 ]
   ? IsUnion<U> extends true
     ? false
-    : IsPalindrome<Join<V, "">>
-  : true;
+    : IsPalindrome<Join<V, ''>>
+  : true

@@ -5,4 +5,4 @@ type DropString<
   ? Includes<ToSplitted<R>, H> extends true
     ? DropString<T, R>
     : `${H}${DropString<T, R>}`
-  : S;
+  : S
