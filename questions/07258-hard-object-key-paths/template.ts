@@ -3,7 +3,7 @@ type GenNode<
   IsRoot extends boolean,
 > = IsRoot extends true
   ? `${K}`
-  : `.${K}` | (K extends number ? `[${K}]` | `.[${K}]` : never);
+  : `.${K}` | (K extends number ? `[${K}]` | `.[${K}]` : never)
 
 type ObjectKeyPaths<
   T extends object,
@@ -11,8 +11,8 @@ type ObjectKeyPaths<
   K extends keyof T = keyof T,
 > = K extends string | number
   ?
-      | GenNode<K, IsRoot>
-      | (T[K] extends object
-          ? `${GenNode<K, IsRoot>}${ObjectKeyPaths<T[K], false>}`
-          : never)
-  : never;
+  | GenNode<K, IsRoot>
+  | (T[K] extends object
+    ? `${GenNode<K, IsRoot>}${ObjectKeyPaths<T[K], false>}`
+    : never)
+  : never
